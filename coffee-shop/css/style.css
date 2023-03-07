@@ -1,0 +1,309 @@
+body {
+  width: 1000px; /* increase the width of the body to make space for the sidebar on the right */
+  border: 2px solid black; /* add a 2px border in black around the content */
+  margin: 20px auto; /* 20px margin from top and bottom of the browser body and auto makes the content sit equidistant from the left and right of the browser body */
+  padding: 20px; /* make the content inside the body sit at a 20px gap from all the 4 sides */
+  border-radius: 10px; /* round the edges of the border */
+  font-family: "Montserrat", serif; /* change the default font to sans serif */
+  background-color: #d2d2d1;
+}
+.logoHeader {
+  width: 100%;
+  height: 100px;
+  background-color: #81978e;
+  box-sizing: border-box;
+}
+.logo1 {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  background-color: #81978e;
+  float: left;
+}
+.hero1 {
+  width: 100%;
+}
+
+h1 {
+  color: #312a27; /* using a hex code to change the colour */
+  font-family: "Montserrat", serif; /* changes how the text looks to use the cursive font */
+}
+main h2 {
+  text-align: center;
+  color: #312a27;
+  font-family: "Montserrat", serif;
+}
+
+nav {
+  background-color: #312a27; /* add colour to the nav background */
+  padding: 20px 0; /* add a 20 px top and bottom padding in the nav tag  */
+  text-align: center; /* make the text in the nav centered */
+}
+
+nav a {
+  font-size: 20px; /* make the text bigger than default */
+  line-height: 30px; /* specifies the height of a line */
+  font-weight: bold; /* make the text bold */
+  color: #b78667; /* change the colour of the text links */
+  text-decoration: none; /* remove the underline */
+  padding: 0 30px; /* push the links away from the other links */
+}
+
+main {
+  width: 1000px; /* set the width of the main section */
+  float: left; /* push the main section to the left */
+}
+
+img {
+  width: 100%; /* make the image go all the way from left to the right */
+  vertical-align: middle;
+}
+footer {
+  clear: both; /* clear the floating elements above */
+  text-align: center; /* Center the text in the footer */
+  font-weight: bold; /* make the text bold */
+  background-color: #312a27; /* add colour to the  background */
+  padding: 20px 0; /* add a 20 px top and bottom padding in the footer tag  */
+  font-size: 20px; /* make the text bigger than default */
+  color: #b78667; /* change the colour of the text */
+}
+
+.hero {
+  position: relative; /* to make this div the relative ancestor of .herotext */
+  text-align: center; /* to center all the content in .hero */
+}
+.herotext {
+  position: absolute; /* make .herotext content sit in a separate layer over the image */
+  top: 0; /* make the .herotext cover the entire area of .hero from top */
+  bottom: 0; /* to bottom */
+  left: 0; /* and left */
+  right: 0; /* right, so that the entire image is overlayed */
+  padding: 100px; /* add some padding */
+  color: #312a27; /* change the text colour */
+  font-family: "Montserrat", serif; /* make the font appear in sans-serif */
+  font-weight: bold; /* make the text bold */
+}
+.herotext h2 {
+  color: #312a27; /* change the colour of the heading in .herotext */
+  font-style: bold;
+}
+.shopbutton {
+  background-color: #312a27; /* add a background colour */
+  color: wheat; /* change the text colour */
+  display: inline-block; /* so that we can assign a width */
+  width: 120px; /* set the width of the link */
+  font-size: 20px; /* change the font size */
+  border: 2px solid wheat; /* add a border */
+  border-radius: 2%;
+  text-decoration: none; /* remove the underline */
+  padding: 10px; /* add a top, right, bottom and left padding */
+}
+/* Order page CSS changes */
+main.order {
+  width: 100%;
+}
+.order h2 {
+  text-align: center;
+  color: #312a27;
+  font-family: "Montserrat", serif;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin: 20px;
+  font-family: "Montserrat", serif;
+  font-size: 18px;
+}
+.enjoy {
+  display: flex;
+  flex-flow: column;
+  border: 2px solid #312a27;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 5px #312a27;
+}
+.enjoy h3 {
+  margin: 20px 0 0 0;
+}
+.enjoy button,
+.shopbutton {
+  margin-top: auto;
+  background-color: #312a27;
+  color: wheat;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 21px;
+  font-family: "Montserrat", serif;
+  font-weight: bold;
+}
+.enjoy > img {
+  order: -1;
+  align-self: center;
+}
+
+/* Order page CSS changes end here */
+
+/* Adding CSS for multi-level menu */
+
+nav ul {
+  /* applies these styles to all the child <ul> tags in <nav> */
+  list-style-type: none; /* remove the dots from the list */
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul > li {
+  /* Only applies these styles to the immediate child <li> in the immediate child <ul> in <nav>. Basically it only affects the <li> in the main menu not the sub menu */
+  display: inline-block; /* to make the links in the main menu site side by side */
+  position: relative; /* to make the parent <li> as the container element of the absolutely positioned <ul> representing the sub menu */
+}
+
+nav ul li ul {
+  /* applies styles only to the sub menu */
+  width: 200px;
+  position: absolute; /* put the sub menu in a separate layer */
+  z-index: 999; /* make sure the sub menu is not hidden behind other elements */
+  text-align: left;
+  background-color: #312a27;
+  box-shadow: 0 0 5px #b78667;
+}
+
+nav ul li ul li a {
+  /* styles for the <a> in the sub menu */
+  color: wheat;
+  padding: 10px;
+  display: block; /* to make sure the anchor tags occupy all the space available otherwise the hover colour changes do not have a good user experience. */
+}
+
+nav ul li ul li:hover a:hover {
+  /* styles for the <a> in the sub menu on mouse over */
+  color: #b78667;
+  background-color: #312a27;
+}
+
+nav ul li ul {
+  /* applies styles only to the sub menu */
+  display: none; /* hide the sub menu by default */
+}
+
+nav ul li:hover ul {
+  /* applies styles only to the sub menu whose parent <li> is hovered */
+  display: block; /* show the sub menu when a user brings their mouse over the parent <li> */
+}
+
+/* Footer and sidebar menus */
+footer {
+  padding: 0 0 20px 0;
+}
+
+*/ footer dt {
+  text-decoration: none;
+  text-align: center;
+}
+footer a {
+  color: wheat;
+  text-decoration: none;
+}
+
+/* Gallery page CSS changes */
+
+main.gallery {
+  width: 100%;
+}
+
+.gallery h2 {
+  text-align: center;
+  color: #312a27;
+  font-family: "Montserrat", serif;
+}
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+.menutabla {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+.btnForm {
+  background-color: #312a27;
+  color: wheat;
+}
+
+.gallery figure {
+  margin: 0; /* to remove the default margin */
+  position: relative; /* to make the figure as the containing element of figcaption */
+}
+
+.gallery img {
+  display: block; /* to remove any extra spacing */
+}
+
+figcaption {
+  color: wheat;
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  padding: 6% 2%;
+  text-align: center;
+  position: absolute; /* to make the caption appear on top of the image */
+  bottom: 0; /* to have the caption positioned at the bottom of the image */
+  background-color: rgba(128, 5, 5, 0.67);
+  width: 96%;
+}
+
+.clip1 {
+  clip-path: polygon(
+    30% 0%,
+    74% 25%,
+    100% 30%,
+    95% 60%,
+    91% 95%,
+    19% 90%,
+    0% 70%,
+    7% 35%
+  );
+}
+.clip2 {
+  clip-path: polygon(
+    1.11% 6.3%,
+    100% 0%,
+    99.66% 45.74%,
+    92.5% 97.97%,
+    1.94% 100.35%
+  );
+}
+
+table,
+td,
+th {
+  border: 2px solid black;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 5px 10px;
+}
+thead th,
+tfoot th {
+  background-color: rgb(58, 58, 58);
+  color: white;
+}
+tbody tr:nth-child(even) td,
+tbody tr:nth-child(even) th {
+  background-color: rgb(190, 189, 189);
+}
+.field_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 10px 0;
+}
